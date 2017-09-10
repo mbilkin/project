@@ -7,12 +7,42 @@ and open the template in the editor.
     Created on : 08.09.2017, 0:53:11
     Author     : ИВАН
 */
-.fon {
-  background: url(https://3.downloader.disk.yandex.ru/preview/57d48f322c551355d9a2be0561d4fe7b9c07cde5db585442f4f02037f292352a/inf/fKqInKw3d7bLFOeFnMGnhLDsrWTwRk_TELaerToo5Md2rfV7KQBnV4K1EPT2ogbvGR_9HpfwUrc4RXKdJoLuA7U9bAqRYFqQnxT6p3SVhWCr8npumZHI4midPdWhecNq?uid=0&filename=fav_mount.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=1280x843);
-  height:100%;
-  display: flex;
-  background-size: cover;
+.wrap {
+  margin: auto; 
 }
 .form {
-  margin: auto;
+  background: rgba(252, 252, 252, 0.85) ;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  padding: 45px 65px 0; 
 }
+.form__avatar {
+    background: url("https://pp.userapi.com/c837633/v837633921/36894/VisD42Y0sTY.jpg") no-repeat;
+    height: 145px;
+    width: 145px;
+    background-size: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+.form__description,
+.form__title {
+    color: #455a64;
+    text-align: center;
+    white-space: nowrap
+}
+.form__title {
+    font-family: "Roboto Medium";
+    font-size: 28px;
+}
+.form__description {
+    font-family: "Roboto Regular";
+    font-size: 16px;
+}
+.social{
+    padding: 10px 0;
+}
+.social__link{
+    
+}
+

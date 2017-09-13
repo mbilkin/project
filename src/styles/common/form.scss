@@ -14,9 +14,11 @@ and open the template in the editor.
   background: rgba(252, 252, 252, 0.85) ;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  padding: 45px 65px 0; 
-}
-.form__avatar {
+  padding: 45px 45px 0; 
+  @media (min-width: 992px) {
+    padding: 45px 65px 0;
+  }
+  &__avatar {
     background: url("https://pp.userapi.com/c837633/v837633921/36894/VisD42Y0sTY.jpg") no-repeat;
     height: 145px;
     width: 145px;
@@ -24,25 +26,33 @@ and open the template in the editor.
     border-radius: 50%;
     display: block;
     margin: 0 auto 20px;
-}
-.form__description,
-.form__title {
+  }
+  &__description,
+  &__title {
     color: #455a64;
     text-align: center;
     white-space: nowrap
-}
-.form__title {
+  }
+  &__title {
     font-family: "Roboto Medium";
     font-size: 28px;
-}
-.form__description {
+  }
+  &__description {
     font-family: "Roboto Regular";
     font-size: 16px;
+  }
 }
 .social{
-    padding: 10px 0;
+    padding: 35px 0;
+    text-align: center;
+    &__link{
+        padding: 5px;
+        text-decoration: none;   
+    }
+    &__icon {
+        fill: #73d4c8;
+        &:hover{
+            fill: #00bfa5;
+        }
+    }
 }
-.social__link{
-    
-}
-

@@ -24,9 +24,37 @@ body {
     font-family: "Roboto Regular";
     src: local("Roboto-Regular"), url("../fonts/Roboto-Regular.ttf");
 }
+@font-face {
+    font-family: "Roboto Light";
+    src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf");
+}
 .fon {
   background: url(../images/fon.png);
   height:100%;
   display: flex;
+  flex-flow: column nowrap;
   background-size: cover;
+  &_auth{
+      border: 1px solid #fff;
+      border-radius: 7px;
+      margin: 24px auto 0;
+      width: 183px;
+      @media (min-width: 992px) {
+        margin: 24px 0 0 calc(100% - 210px);
+      }
+  }
+}
+.button {
+    color: #fff;
+    font-family: "Roboto Medium";
+    font-size: 16px;
+    padding: 14px 28px;
+    text-decoration: none;
+}
+.footer {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: "Roboto Light";
+    font-size: 16px;
+    color:#fff;
 }

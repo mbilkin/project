@@ -5,16 +5,24 @@ block variables
 
 block content
   div.fon 
+    a.button.fon_auth(href="#") Авторизоваться
     div.wrap
       div.form
         div.form__avatar
         div.form__title Мочалкин Иван
         div.form__description Личный сайт веб разработчика
         div.social
-          a.social__link.vk(href="/blog.html") 
-          a.social__link.fb(href="/blog.html")
-          a.social__link.in(href="/blog.html") 
+          a.social__link(href="https://vk.com/think_positive.html")
+            svg.social__icon(width="30" height="22px")
+              use(xlink:href="assets/icons/sprite.svg#vk")
+          a.social__link(href="https://github.com/mbilkin")
+            svg.social__icon(width="30px" height="22px")
+              use(xlink:href="assets/icons/sprite.svg#github")
+          a.social__link(href="#") 
+            svg.social__icon(width="30px" height="22px")
+              use(xlink:href="assets/icons/sprite.svg#in")
       include ../common/menu.pug
+    footer.footer @ Мочалкин Иван
         
    
   

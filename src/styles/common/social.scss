@@ -1,0 +1,13 @@
+.social{
+    text-align: center;
+    &__link{
+        padding: 5px;
+        text-decoration: none;   
+    }
+    &__icon {
+        fill: #73d4c8;
+        &:hover{
+            fill: #00bfa5;
+        }
+    }
+}

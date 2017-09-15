@@ -1,58 +1,12 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 08.09.2017, 0:53:11
-    Author     : ИВАН
-*/
-.wrap {
-  margin: auto; 
-}
-.form {
-  background: rgba(252, 252, 252, 0.85) ;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  padding: 45px 45px 0; 
-  @media (min-width: 992px) {
-    padding: 45px 65px 0;
-  }
-  &__avatar {
-    background: url("https://pp.userapi.com/c837633/v837633921/36894/VisD42Y0sTY.jpg") no-repeat;
-    height: 145px;
-    width: 145px;
-    background-size: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px;
-  }
-  &__description,
-  &__title {
-    color: #455a64;
-    text-align: center;
-    white-space: nowrap
-  }
-  &__title {
-    font-family: "Roboto Medium";
-    font-size: 28px;
-  }
-  &__description {
-    font-family: "Roboto Regular";
-    font-size: 16px;
-  }
-}
-.social{
-    padding: 35px 0;
-    text-align: center;
-    &__link{
-        padding: 5px;
-        text-decoration: none;   
+.form { 
+    background: rgba(252, 252, 252, 0.85) ;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 45px 45px 0; 
+    @media (min-width: 992px) {
+      padding: 45px 65px 0;
     }
-    &__icon {
-        fill: #73d4c8;
-        &:hover{
-            fill: #00bfa5;
-        }
+    &__social{
+      padding: 35px 0;
     }
 }

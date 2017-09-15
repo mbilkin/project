@@ -5,23 +5,43 @@ block variables
 
 block content
   div.fon 
-    a.button.fon_auth(href="#") Авторизоваться
+    a#login.button.fon__auth(href="#") Авторизоваться
     div.wrap
-      div.form
-        div.form__avatar
-        div.form__title Мочалкин Иван
-        div.form__description Личный сайт веб разработчика
-        div.social
-          a.social__link(href="https://vk.com/think_positive.html")
-            svg.social__icon(width="30" height="22px")
-              use(xlink:href="assets/icons/sprite.svg#vk")
-          a.social__link(href="https://github.com/mbilkin")
-            svg.social__icon(width="30px" height="22px")
-              use(xlink:href="assets/icons/sprite.svg#github")
-          a.social__link(href="#") 
-            svg.social__icon(width="30px" height="22px")
-              use(xlink:href="assets/icons/sprite.svg#in")
-      include ../common/menu.pug
+      div.flip
+        div.flip__flipper
+          div.flip__front
+            div.form.user
+              div.user__avatar
+              div.user__title Мочалкин Иван
+              div.user__description Личный сайт веб разработчика
+              div.social.form__social
+                a.social__link(href="https://vk.com/think_positive.html")
+                  svg.social__icon(width="30" height="22px")
+                    use(xlink:href="assets/icons/sprite.svg#vk")
+                a.social__link(href="https://github.com/mbilkin")
+                  svg.social__icon(width="30px" height="22px")
+                    use(xlink:href="assets/icons/sprite.svg#github")
+                a.social__link(href="#") 
+                  svg.social__icon(width="30px" height="22px")
+                    use(xlink:href="assets/icons/sprite.svg#in")
+            include ../common/menu.pug
+          div.flip__back        
+            div.form.user
+              div.user__avatar
+              div.user__title Тест тест
+              div.user__description Личный сайт веб разработчика
+              div.social.form__social
+                a.social__link(href="https://vk.com/think_positive.html")
+                  svg.social__icon(width="30" height="22px")
+                    use(xlink:href="assets/icons/sprite.svg#vk")
+                a.social__link(href="https://github.com/mbilkin")
+                  svg.social__icon(width="30px" height="22px")
+                    use(xlink:href="assets/icons/sprite.svg#github")
+                a.social__link(href="#") 
+                  svg.social__icon(width="30px" height="22px")
+                    use(xlink:href="assets/icons/sprite.svg#in")
+            include ../common/menu.pug
+      
     footer.footer @ Мочалкин Иван
         
    

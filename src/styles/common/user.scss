@@ -1,0 +1,26 @@
+.user {
+    
+  &__avatar {
+    background: url("https://pp.userapi.com/c837633/v837633921/36894/VisD42Y0sTY.jpg") no-repeat;
+    height: 145px;
+    width: 145px;
+    background-size: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  &__description,
+  &__title {
+    color: #455a64;
+    text-align: center;
+    white-space: nowrap
+  }
+  &__title {
+    font-family: "Roboto Medium";
+    font-size: 28px;
+  }
+  &__description {
+    font-family: "Roboto Regular";
+    font-size: 16px;
+  }
+}

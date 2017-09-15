@@ -38,6 +38,10 @@ const paths = {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
     },
+    fonts: {
+        src: 'src/fonts/**/*.*',
+        dest: 'build/assets/fonts/'
+    },
     svg: {
         src: 'src/icons/*.svg',
         dest: 'build/assets/icons/'
@@ -119,6 +123,11 @@ function images() {
     return gulp.src(paths.images.src)
           .pipe(gulp.dest(paths.images.dest));
 }
+// просто переносим шрифты
+function fonts() {
+    return gulp.src(paths.fonts.src)
+          .pipe(gulp.dest(paths.fonts.dest));
+}
 
 // следим за src и запускаем нужные таски (компиляция и пр.)
 function watch() {
@@ -127,6 +136,7 @@ function watch() {
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.images.src, images);
     gulp.watch(paths.svg.src, svg);
+    gulp.watch(paths.svg.src, fonts);
 }
 
 // следим за build и релоадим браузер
@@ -146,10 +156,11 @@ exports.images = images;
 exports.watch = watch;
 exports.server = server;
 exports.svg = svg;
+exports.fonts = fonts;
 
 // сборка и слежка
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, templates, images, svg),
+    gulp.parallel(styles, scripts, templates, images, svg, fonts),
     gulp.parallel(watch, server)
 ));

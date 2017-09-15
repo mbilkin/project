@@ -29,5 +29,13 @@
         &:hover {
             background: rgba(0, 150, 136, 0.85);
         }
+        
+        &_right {
+            border-bottom-right-radius: 5px;
+        }
+        
+        &_left {
+            border-bottom-left-radius: 5px;
+        }
     }
 }

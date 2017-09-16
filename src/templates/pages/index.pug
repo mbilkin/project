@@ -26,7 +26,7 @@ block content
                   svg.social__icon(width="30px" height="22px")
                     use(xlink:href="assets/icons/sprite.svg#in")
             include ../common/menu.pug
-            + mymenu({'class':'menu__link_left', 'value':'Мои работы'}, {'class':'', 'value':'Обо мне'},{'class':'menu__link_right', 'value':'Блог'})
+            + mymenu({'class':'menu__link_left', 'value':'Мои работы', 'href':'my-works.html'}, {'class':'', 'value':'Обо мне', 'href':'about.html'},{'class':'menu__link_right', 'value':'Блог', 'href':'blog.html'})
           div.flip__back.form__width
             div.form
               div.title.form_title Авторизуйтесь
@@ -55,7 +55,7 @@ block content
                   svg.social__icon(width="30px" height="22px")
                     use(xlink:href="assets/icons/sprite.svg#in")
             include ../common/menu.pug
-            + mymenu({'class':'menu__link_left', 'value':'На главную'},{'class':'menu__link_right', 'value':'Войти'})
+            + mymenu({'class':'menu__link_left', 'value':'На главную', 'href':'index.html'},{'class':'menu__link_right', 'value':'Войти', 'href':'#'})
     footer.footer @ Мочалкин Иван
         
    

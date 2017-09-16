@@ -5,10 +5,11 @@ function loginShow(){
             $('.flip').toggleClass('flip_rotate');
         });
         $('body').on('click', function(event){
-            if (   $(event.target).closest(".flip").length
-                || $(event.target).closest("#login").length ) return;
-            $('.flip').removeClass('flip_rotate');
-            event.stopPropagation();
+            if (!($(event.target).closest(".flip").length
+                || $(event.target).closest("#login").length )) {
+                $('.flip').removeClass('flip_rotate');
+                //event.stopPropagation();
+            }
         });
     }
 }

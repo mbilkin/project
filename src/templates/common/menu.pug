@@ -1,7 +1,5 @@
-ul.menu
-    li.menu__elem
-        a.menu__link.menu__link_left(href="/my-works.html") Мои работы
-    li.menu__elem
-        a.menu__link(href="/about.html") Обо мне
-    li.menu__elem
-        a.menu__link.menu__link_right(href="/blog.html") Блог
+mixin mymenu(...items)  
+  ul.menu  
+    each item in items
+      li.menu__elem 
+        a.menu__link(class=item.class)= item.value

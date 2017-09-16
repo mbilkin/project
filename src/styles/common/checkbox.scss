@@ -1,0 +1,43 @@
+.label {
+    
+}
+.checkbox,
+.radio {
+    display: none;
+}
+.checkbox-custom,
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    position: relative;
+    background: $bg-color-green;
+    fill:$bg-color-green;
+}
+
+.checkbox:checked + .checkbox-custom {
+    fill:#fff;
+}
+
+.radio:checked + .radio-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    background: #fff;
+    border-radius: 4px;
+}
+.radio-custom,
+.radio:checked + .radio-custom::before {
+    border-radius: 50%;
+}
+.checkbox-custom,
+.radio-custom,
+.label {
+    display: inline-block;
+    vertical-align: middle;
+}
+

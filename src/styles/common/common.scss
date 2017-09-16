@@ -1,21 +1,13 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 08.09.2017, 0:55:36
-    Author     : ИВАН
-*/
-html, 
-body {
-    height:100%;
-    padding: 0;
-    margin: 0;
-}
-* {
-    box-sizing: border-box;
-}
+$bg-color-green: #00bfa5 !default;
+$bg-color-green-hover: #009688 !default;
+$bg-color-grey: #455a64 !default;
+$bg-color-grey-hover: #373e42 !default;
+$footer-height: 60px !default;
+$default-font-size:16px !default;
+$line-height:1.15 !default;
+$auth-height:55px !default;
+$delta: $auth-height - $footer-height - 5;
+
 @font-face {
     font-family: "Roboto Medium";
     src: local("Roboto-Medium"), url("../fonts/Roboto-Medium.ttf");
@@ -28,19 +20,40 @@ body {
     font-family: "Roboto Light";
     src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf");
 }
+html, 
+body {
+    height:100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Regular";
+    font-size: 16px;
+}
+a {
+    font-family: "Roboto Medium";
+    font-color:#6da3bd;
+}
+* {
+    @include box-sizing(border-box);
+}
 .fon {
+  min-height: 540px;
   background: url(../images/fon.png);
   height:100%;
   display: flex;
   flex-flow: column nowrap;
   background-size: cover;
   &__auth{
+      @include text-overflow();
       border: 1px solid #fff;
       border-radius: 7px;
       margin: 24px auto 0;
-      width: 183px;
+      width: 191px;
       @media (min-width: 992px) {
-        margin: 24px 0 0 calc(100% - 210px);
+        margin: $auth-height - 2 - $default-font-size * $line-height 0 0 calc(100% - 299px);
+      }
+      &:hover{
+          background-color: #fff;
+          color: $bg-color-green;
       }
   }
 }
@@ -56,8 +69,12 @@ body {
 }
 .footer {
     margin: 0 auto;
-    padding-bottom: 10px;
+    padding-bottom: $footer-height - $default-font-size * $line-height;
+    height: $footer-height;
     font-family: "Roboto Light";
-    font-size: 16px;
+    font-size: $default-font-size;
     color:#fff;
+}
+.img-responsive {
+    @include img-responsive();
 }

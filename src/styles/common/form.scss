@@ -1,12 +1,14 @@
 .form { 
+    padding-top: 45px;
     background: rgba(252, 252, 252, 0.85) ;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    padding: 45px 45px 0; 
-    @media (min-width: 992px) {
-      padding: 45px 65px 0;
-    }
+    @include border-top-radius(5px);
     &__social{
-      padding: 35px 0;
+      padding: 40px 0;
+    }
+    &__width {
+        min-width: 327px; 
+        @media (min-width: 992px) {
+          min-width: 405px;
+        }
     }
 }

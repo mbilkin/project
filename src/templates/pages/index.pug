@@ -9,13 +9,14 @@ block content
     div.wrap
       div.flip
         div.flip__flipper
-          div.flip__front
+          div.flip__front.form__width
             div.form.user
               div.user__avatar
+                img.img-responsive(src="https://pp.userapi.com/c837633/v837633921/36894/VisD42Y0sTY.jpg")
               div.user__title Мочалкин Иван
               div.user__description Личный сайт веб разработчика
               div.social.form__social
-                a.social__link(href="https://vk.com/think_positive.html")
+                a.social__link(href="https://vk.com/think_positive")
                   svg.social__icon(width="30" height="22px")
                     use(xlink:href="assets/icons/sprite.svg#vk")
                 a.social__link(href="https://github.com/mbilkin")
@@ -25,11 +26,24 @@ block content
                   svg.social__icon(width="30px" height="22px")
                     use(xlink:href="assets/icons/sprite.svg#in")
             include ../common/menu.pug
-          div.flip__back        
-            div.form.user
-              div.user__avatar
-              div.user__title Тест тест
-              div.user__description Личный сайт веб разработчика
+            + mymenu({'class':'menu__link_left', 'value':'Мои работы'}, {'class':'', 'value':'Обо мне'},{'class':'menu__link_right', 'value':'Блог'})
+          div.flip__back.form__width
+            div.form
+              div.title.form_title Авторизуйтесь
+              div.form_login
+                label.label
+                  input.checkbox(name="checkbox-test" checked="" type="checkbox")
+                  svg.checkbox-custom(width="18px" height="14px")
+                    use(xlink:href="assets/icons/sprite.svg#check")
+                  span.label Lorem ipsum dolor sit amet  
+                label.label
+                  input.radio(name="radio-test" checked="" type="radio")
+                  span.radio-custom    
+                  span.label Lorem ipsum dolor sit amet
+                label.label
+                  input.radio(name="radio-test" type="radio")
+                  span.radio-custom    
+                  span.label Lorem ipsum dolor sit amet  
               div.social.form__social
                 a.social__link(href="https://vk.com/think_positive.html")
                   svg.social__icon(width="30" height="22px")
@@ -41,7 +55,7 @@ block content
                   svg.social__icon(width="30px" height="22px")
                     use(xlink:href="assets/icons/sprite.svg#in")
             include ../common/menu.pug
-      
+            + mymenu({'class':'menu__link_left', 'value':'На главную'},{'class':'menu__link_right', 'value':'Войти'})
     footer.footer @ Мочалкин Иван
         
    

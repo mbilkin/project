@@ -2,4 +2,4 @@ mixin mymenu(...items)
   ul.menu  
     each item in items
       li.menu__elem 
-        a.menu__link(class=item.class href=item.href)= item.value
+        a.menu__link(class=item.class href=item.href)&attributes(attributes)= item.value

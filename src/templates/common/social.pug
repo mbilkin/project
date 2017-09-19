@@ -1,0 +1,9 @@
+mixin social(...items)
+  ul.socials&attributes(attributes)
+    each item in items
+      li.socials__item
+        a(href=item.href class=item.class)
+          svg.socials__icon(width="30px" height="22px")
+            use(xlink:href='assets/icons/sprite.svg#'+item.name)
+
+                 

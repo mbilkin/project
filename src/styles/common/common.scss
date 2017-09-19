@@ -23,8 +23,6 @@ $delta: $auth-height - $footer-height - 5;
 html, 
 body {
     height:100%;
-    padding: 0;
-    margin: 0;
     font-family: "Roboto Regular";
     font-size: 16px;
 }
@@ -32,49 +30,20 @@ a {
     font-family: "Roboto Medium";
     font-color:#6da3bd;
 }
+li {
+    list-style: none;
+}
 * {
+    padding: 0;
+    margin: 0;
     @include box-sizing(border-box);
-}
-.fon {
-  min-height: 540px;
-  background: url(../images/fon.png);
-  height:100%;
-  display: flex;
-  flex-flow: column nowrap;
-  background-size: cover;
-  &__auth{
-      @include text-overflow();
-      border: 1px solid #fff;
-      border-radius: 7px;
-      margin: 24px auto 0;
-      width: 191px;
-      @media (min-width: 992px) {
-        margin: $auth-height - 2 - $default-font-size * $line-height 0 0 calc(100% - 299px);
-      }
-      &:hover{
-          background-color: #fff;
-          color: $bg-color-green;
-      }
-  }
-}
-.wrap {
-  margin: auto;
-}
-.button {
-    color: #fff;
-    font-family: "Roboto Medium";
-    font-size: 16px;
-    padding: 14px 28px;
-    text-decoration: none;
-}
-.footer {
-    margin: 0 auto;
-    padding-bottom: $footer-height - $default-font-size * $line-height;
-    height: $footer-height;
-    font-family: "Roboto Light";
-    font-size: $default-font-size;
-    color:#fff;
 }
 .img-responsive {
     @include img-responsive();
+}
+.circle-photo {
+    height: 145px;
+    width: 145px;
+    overflow: hidden;
+    border-radius: 50%;
 }

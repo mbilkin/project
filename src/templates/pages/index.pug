@@ -6,7 +6,11 @@ block variables
 block content
   include ../common/social.pug
   include ../common/menu.pug
-  div.page 
+  div#parallax.parallax
+    - for (var i = 9; i > 1; i--)
+      .parallax__layer
+        img(src=`/assets/images/layer_0${i}.png`).parallax__image
+  div.page
     button#login.button.page__auth.button_size_16.button_color_white(href="#") 
       span.button__text Авторизоваться
     div.flip.page__info

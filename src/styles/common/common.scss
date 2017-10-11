@@ -8,6 +8,17 @@ $line-height:1.15 !default;
 $auth-height:55px !default;
 $delta: $auth-height - $footer-height - 5;
 
+$white: #efeee9;
+$beige: #eeebdf;
+$green: #10c1a8;
+$gray: #455a64;
+$light-beige: #f9f8f0;
+$font-color: #455a64;
+$titles-color: $gray;
+$parallax-bg: #fedcc8;
+$bottomColor: #2d112b;
+$sandColor: #eedcbc;
+
 @font-face {
     font-family: "Roboto Medium";
     src: local("Roboto-Medium"), url("../fonts/Roboto-Medium.ttf");

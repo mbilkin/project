@@ -7,9 +7,10 @@
       padding: 40px 0 0;
     }
     &__width {
-        min-width: 327px; 
-        @media (min-width: 992px) {
-          min-width: 405px;
+        min-width: 405px;
+        @include laptop {
+            min-width: 327px;
         }
+        
     }
 }

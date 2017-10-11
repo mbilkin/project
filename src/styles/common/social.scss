@@ -1,0 +1,20 @@
+.socials{
+    display:flex;
+    justify-content: center;
+    
+    &__item + .socials__item {
+        margin-left: 6px;
+    }
+    
+    &__link{
+        padding: 5px 5px;
+        text-decoration: none;   
+    }
+    
+    &__icon {
+        fill: #73d4c8;
+        &:hover{
+            fill: #00bfa5;
+        }
+    }
+}

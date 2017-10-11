@@ -1,0 +1,16 @@
+.form { 
+    padding-top: 45px;
+    padding-bottom: 40px;
+    background: rgba(252, 252, 252, 0.85) ;
+    @include border-top-radius(5px);
+    &__social{
+      padding: 40px 0 0;
+    }
+    &__width {
+        min-width: 405px;
+        @include laptop {
+            min-width: 327px;
+        }
+        
+    }
+}

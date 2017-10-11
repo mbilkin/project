@@ -4,10 +4,45 @@ block variables
   - var title = 'Добро пожаловать'
 
 block content
-  h1 Главная
-  form
-    label(for="email") 
-    input(name="email" id="email")
-    label(for="password") 
-    input(name="password" id="password")
-    button Войти
+  include ../common/social.pug
+  include ../common/menu.pug
+  div#parallax.parallax
+    - for (var i = 9; i > 1; i--)
+      .parallax__layer
+        img(src=`/assets/images/layer_0${i}.png`).parallax__image
+  div.page
+    button#login.button.page__auth.button_size_16.button_color_white(href="#") 
+      span.button__text Авторизоваться
+    div.flip.page__info
+      div.flip__flipper
+        div.flip__front.form__width
+          div.form.user
+            div.user__avatar.circle-photo
+              img.img-responsive(src="https://pp.userapi.com/c837633/v837633921/36894/VisD42Y0sTY.jpg")
+            div.user__title Мочалкин Иван
+            div.user__description Личный сайт веб разработчика
+            + social({'class':'socials__link', 'name':'vk', 'href':'https://vk.com/think_positive'},{'class':'socials__link', 'name':'github', 'href':'https://github.com/mbilkin'},{'class':'socials__link', 'name':'in', 'href':'#'})(class='form__social')              
+          + mymenu({'class':'menu__link_left', 'value':'Мои работы', 'href':'my-works.html'}, {'class':'', 'value':'Обо мне', 'href':'about.html'},{'class':'menu__link_right', 'value':'Блог', 'href':'blog.html'})(class="menu__link_size_16 menu__link_color_white")
+        div.flip__back.form__width
+          div.form
+            div.title.form_title Авторизуйтесь
+            div.form_login
+              label.label
+                input.checkbox(name="checkbox-test" checked="" type="checkbox")
+                svg.checkbox-custom(width="18px" height="14px")
+                  use(xlink:href="assets/icons/sprite.svg#check")
+                span.label Lorem ipsum dolor sit amet  
+              label.label
+                input.radio(name="radio-test" checked="" type="radio")
+                span.radio-custom    
+                span.label Lorem ipsum dolor sit amet
+              label.label
+                input.radio(name="radio-test" type="radio")
+                span.radio-custom    
+                span.label Lorem ipsum dolor sit amet  
+          + mymenu({'class':'menu__link_left', 'value':'На главную', 'href':'index.html'},{'class':'menu__link_right', 'value':'Войти', 'href':'#'})(class="menu__link_size_16 menu__link_color_white")
+    footer.footer.page__footer 
+      p.page__copyright @ Мочалкин Иван
+        
+   
+  

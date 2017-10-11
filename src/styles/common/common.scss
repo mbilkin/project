@@ -1,0 +1,60 @@
+$bg-color-green: #00bfa5 !default;
+$bg-color-green-hover: #009688 !default;
+$bg-color-grey: #455a64 !default;
+$bg-color-grey-hover: #373e42 !default;
+$footer-height: 60px !default;
+$default-font-size:16px !default;
+$line-height:1.15 !default;
+$auth-height:55px !default;
+$delta: $auth-height - $footer-height - 5;
+
+$white: #efeee9;
+$beige: #eeebdf;
+$green: #10c1a8;
+$gray: #455a64;
+$light-beige: #f9f8f0;
+$font-color: #455a64;
+$titles-color: $gray;
+$parallax-bg: #fedcc8;
+$bottomColor: #2d112b;
+$sandColor: #eedcbc;
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: local("Roboto-Medium"), url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto Regular";
+    src: local("Roboto-Regular"), url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto Light";
+    src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf");
+}
+html, 
+body {
+    height:100%;
+    font-family: "Roboto Regular";
+    font-size: 16px;
+}
+a {
+    font-family: "Roboto Medium";
+    font-color:#6da3bd;
+}
+li {
+    list-style: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+    @include box-sizing(border-box);
+}
+.img-responsive {
+    @include img-responsive();
+}
+.circle-photo {
+    height: 145px;
+    width: 145px;
+    overflow: hidden;
+    border-radius: 50%;
+}

@@ -6,9 +6,14 @@ const config = {
     filename: 'bundle.js'
   },
   plugins: [
+    new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+    }),
     new UglifyJSPlugin({
       sourceMap: true
     })
+    
   ]
 };
 

@@ -7,6 +7,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
+const gcmq = require('gulp-group-css-media-queries');
 
 // scripts
 const gulpWebpack = require('gulp-webpack');
@@ -101,7 +102,8 @@ function styles() {
             includePaths: require('node-normalize-scss').includePaths,
             outputStyle: 'compressed'
          }))
-        .pipe(sourcemaps.write())        
+        .pipe(sourcemaps.write())
+        .pipe(gcmq())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))       
 }
